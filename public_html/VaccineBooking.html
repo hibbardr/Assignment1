@@ -5,50 +5,66 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html lang="en">
-<head>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to style sheet -->
     <link rel="stylesheet" href="styleSheet/StyleSheet.css" />
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Link to jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Link to Jquery validation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <!-- Link to jQuery storage -->
     <script src="/path/to/savestorage.js"></script>
+    <!-- Link to javascript -->
     <script src="javaScript/JavaScript.js"></script>
+    <!-- Title of webpage -->
     <title>
         Vaccine Booking
     </title>
-</head>
-<body>
 
-    <header>
-        <h1 id="title">COVID-19 Vaccine Booking System</h1>
-        <p id="info">Assignment #1/ Rachel Hibbard/ 991533049</p>
-    </header>
-    <div class="grid">
-        <div class="grid-item"><a href="BookingListing.html">Booking Listing Page</a></div>
-        <div class="grid-item"> <a href="index.html">Home</a></div>
-    </div>
-    <h2 id="pTitle">Vaccine Booking</h2>
-    <div class="form1">
-    <form id="form" onSubmit= "return SubmitForm()" />
-        <label for="date">Date: </label>
-        <input class="heighttext" type="text" id="date" name="date" value="05-30-2021" required /><br />
-        <p id="error"></p><br />
-        <label for="time">Time: </label>
-        <input class="heighttext" type="text" id="time" name="time" value="1200" required /><br /> <br />
-        <label for="ohip">OHIP #: </label>
-        <input class="heighttext" type="number" id="ohip" name="ohip" value="0000000000" required  /><br /> <br />
-        <label for="email">Email Address: </label>
-        <input class="heighttext" type="email" id="email" name="name" value="john.smith@hotmail.com" required /><br /> <br />
-        <label for="pNumber">Phone Number: </label>
-        <input class="heighttext" type="number" id="pNumber" name="pNumber" value="9055555555"  required/><br /> <br />
-        <input type="submit" value="Submit Booking">
-    </form>
-    </div>
-    <div class="footer">
-        <div class="transbox">
-            <p>Hibbardr/ Davis Campus/ May 30th 2021</p>
+    <body>
+        <!-- Page Header -->
+        <header>
+            <h1 id="title">COVID-19 Vaccine Booking System</h1>
+            <p id="info">Assignment #1/ Rachel Hibbard/ 991533049</p>
+        </header>
+        <!-- Div grid for linked pages -->
+        <div class="grid">
+            <div class="grid-item"><a href="BookingListing.html">Booking Listing Page</a></div>
+            <div class="grid-item"> <a href="index.html">Home</a></div>
         </div>
-    </div>
+        <!-- Page title -->
+        <h2 id="pTitle">Vaccine Booking</h2>
+        <div class="form1">
+            <!-- Vaccination form
+                  On submit save values to local storage
+            -->
+            <form id="form" onSubmit= "return SubmitForm()">
 
-</body>
+                <label for="date">Date: </label>
+                <input class="heighttext" type="text" id="date" name="date" value="05-30-2021" required /><br />
+
+                <label for="time">Time: </label>
+                <input class="heighttext" type="text" id="time" name="time" value="1200" required /><br /> <br />
+
+                <label for="ohip">OHIP #: </label>
+                <input class="heighttext" type="number" id="ohip" name="ohip" value="0000000000" required  /><br /> <br />
+
+                <label for="email">Email Address: </label>
+                <input class="heighttext" type="email" id="email" name="name" value="john.smith@hotmail.com" required /><br /> <br />
+
+                <label for="pNumber">Phone Number: </label>
+                <input class="heighttext" type="number" id="pNumber" name="pNumber" value="9055555555"  required/><br /> <br />
+
+                <input type="submit" value="Submit Booking">
+            </form>
+        </div>
+        <div class="footer">
+            <div class="transbox">
+                <p>Hibbardr/ Davis Campus/ May 30th 2021</p>
+            </div>
+        </div>
+
+    </body>
 </html>
