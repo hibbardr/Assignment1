@@ -1,32 +1,38 @@
 var date=$('#date').val();
 $(document).ready(function(){  
     $("#form").validate({
+        //specify rules for validation
         rules: {
-      // The key name on the left side is the name attribute
-      // of an input field. Validation rules are defined
-      // on the right side
+      // validate email 
       email: {
         required: true,
-        // Specify that email should be validated
-        // by the built-in "email" rule
+        //email is required and specified format
         email: true
       },
+      //Validate date
       date: {
+          //date is required with a minimum length and a date format
         required: true,
         minlength: 4,
         date: true
       },
+      //Validate time
       time:{
+          //time is requried max length is 4 and min length is 2
           required: true,
           maxlength:4,
           minlength:2
       },
+      //Validate ohip
       ohip:{
+          //Ohip is required with a specific amount of characters
           required: true,
           maxlength:10,
           minlength:10
       },
+      //Validate phone number
       pNumber:{
+          //Phone number is required with a specific amount of characters
           required:true,
           minlength:10,
           maxlength:10
@@ -55,13 +61,10 @@ $(document).ready(function(){
           maxlength:"Please enter valid phone number"
       },
       email: "Please enter a valid email address"
-    }
- 
-    // Make sure the form is submitted to the destination defined
-    // in the "action" attribute of the form when valid
-    
+    }    
 });
 });
+//Specify function to save form inputs to local storage
 function SubmitForm(){
     var date=$('#date').val();
     var time=$('#time').val();

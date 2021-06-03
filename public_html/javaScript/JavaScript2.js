@@ -1,3 +1,4 @@
+//Overide elements of UL to fill with local stoage key pairs
 $(document).ready(function(){  
     $("#listDate").html(localStorage.getItem("date"));
     $("#listTime").html(localStorage.getItem("time"));
